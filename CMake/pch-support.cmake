@@ -9,8 +9,6 @@
 # Copyright (C) 2019 Andrzej Borucki <borucki_andrzej@wp.pl>
 # see file LICENSE
 
-cmake_minimum_required(VERSION 3.0)
-
 macro(combine_arguments _variable)
   set(_result "")
   foreach(_element ${${_variable}})
