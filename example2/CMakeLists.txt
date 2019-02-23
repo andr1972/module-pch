@@ -4,7 +4,7 @@ project(example2)
 
 set(VERBOSE "")
 #uncomment it for list of included headers
-#set(VERBOSE "-H")
+set(VERBOSE "-H")
 
 add_library(myxcb
         xcb_font.c xcb_font.h
@@ -27,3 +27,4 @@ target_compile_options(structures PRIVATE ${VERBOSE})
 target_compile_options(example2 PRIVATE ${VERBOSE} -g)
 
 add_precompiled_header(myxcb xcb_pch.c "-O3")
+add_precompiled_header(structures str_pch.cpp "")
