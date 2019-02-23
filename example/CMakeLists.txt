@@ -17,5 +17,3 @@ target_link_libraries(example log)
 
 add_precompiled_header(example pch.cpp "-g")
 add_precompiled_header(log pch.cpp "-O3")
-
-#dodac lepsze przyklady z netu

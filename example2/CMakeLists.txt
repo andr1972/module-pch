@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
+include(../CMake/pch-support.cmake)
 project(example2)
 
 set(VERBOSE "")
@@ -25,3 +26,4 @@ target_compile_options(myxcb PRIVATE ${VERBOSE} -O3)
 target_compile_options(structures PRIVATE ${VERBOSE})
 target_compile_options(example2 PRIVATE ${VERBOSE} -g)
 
+add_precompiled_header(myxcb xcb_pch.c "-O3")
